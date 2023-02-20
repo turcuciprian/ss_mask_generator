@@ -1,4 +1,7 @@
 {
+  "name": "ml_images_to_masks_generator",
+  "version": "0.1.0",
+  "author": "Ciprian Turcu <turcuciprian1@gmail.com>",
   "devDependencies": {
     "jimp": "^0.22.4"
   }
