@@ -2,7 +2,7 @@ const Jimp = require("jimp");
 const fs = require("fs");
 
 //all images in a directory that have the pixels #FF0000 are turned to #FFFFFF and the rest black
-export async function maskGenerator(inputDirectory="images/", outputDirectory="processed") {
+exports.maskGenerator(inputDirectory="images/", outputDirectory="processed") {
     [inputDirectory, outputDirectory].forEach(dir => !fs.existsSync(dir) && fs.mkdirSync(dir));
   // Read all the files in the input directory
   const files = fs.readdirSync(inputDirectory);
