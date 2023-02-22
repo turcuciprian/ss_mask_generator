@@ -38,3 +38,5 @@ Let's say you have the folder images with 2 images in it:
 Then you mark the images with a brush of the #FF0000 color (that is pure red) on the images where you want the masks to be.
 
 After that you run the script and all your images with their names should be in the form masks in the "processed" folder (default second parameter name of the function)
+
+Coming soon: the ability to create b&w images from your dataset of jpg images
