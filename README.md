@@ -6,7 +6,11 @@ A simple nodejs script that allows users to transform images into image masks.
 
 In the terminal in the root path of your project:
 
+<<<<<<< HEAD
 `npm i ml_images_to_masks_generator`
+=======
+`npm install -D ml_images_to_masks_generator`
+>>>>>>> d19fc5e0cfb12e367d244fb5868c5b904d42964f
 
 In a javascript file somewhere in the root path of your project:
 
@@ -29,7 +33,11 @@ I reccomend turning your pictures black and white before marking them
 
 See example bellow:
 
+<<<<<<< HEAD
 ### black & white images
+=======
+### Black And White images
+>>>>>>> d19fc5e0cfb12e367d244fb5868c5b904d42964f
 
 If you want to have a seamless experience with turning the images into accurate masks , you need to have pure red markings on your images. In order to have that I reccomend to turn all your images to black and white first
 
