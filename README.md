@@ -25,18 +25,14 @@ ex:
 
 `maskGenerator('source_folder_','mask_destination_folder')`
 
-### EXAMPLE
+I reccomend turning your pictures black and white before marking them
 
-Let's say you have the folder images with 2 images in it:
+See example bellow:
 
-```
-| Images (folder)
-|--Picture1.jpg (file)
-|--Picture2.jpg (file)
-```
+### B&W images
 
-Then you mark the images with a brush of the #FF0000 color (that is pure red) on the images where you want the masks to be.
+If you want to have a seamless experience with turning the images into accurate masks , you need to have pure red markings on your images. In order to have that I reccomend to turn all your images to black and white first
 
-After that you run the script and all your images with their names should be in the form masks in the "processed" folder (default second parameter name of the function)
+There is a module called imgToGrayscale that has a method with the same name in it that can be used to turn all the images in a source directory into grayscale images with the same name in a destination directory
 
-Coming soon: the ability to create b&w images from your dataset of jpg images
+ in test.js you have an  examples on how to use both of these methods (maskGenerator and imgToGrayscale)

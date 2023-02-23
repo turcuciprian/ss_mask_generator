@@ -1,3 +1,6 @@
 images
 processed
 node_modules
+publish.js
+afterGray
+beforeGray

@@ -1,15 +1,19 @@
-const Jimp = require("jimp");
-const fs = require("fs");
+import Jimp from "jimp";
+import fs from "fs";
+import { createFolderIfMissing } from "./lib.js";
 
 //all images in a directory that have the pixels #FF0000 are turned to #FFFFFF and the rest black
-exports.maskGenerator = async function(inputDirectory="images/", outputDirectory="processed"){
-    [inputDirectory, outputDirectory].forEach(dir => !fs.existsSync(dir) && fs.mkdirSync(dir));
+export const maskGenerator = async (
+  inputDirectory = "images/",
+  outputDirectory = "processed"
+) => {
+  createFolderIfMissing([inputDirectory, outputDirectory]);
   // Read all the files in the input directory
   const files = fs.readdirSync(inputDirectory);
 
   // Loop through each file in the directory
   for (const file of files) {
-      console.log(file)
+    console.log(file);
     // Load the image
     const image = await Jimp.read(inputDirectory + file);
 
@@ -30,7 +34,6 @@ exports.maskGenerator = async function(inputDirectory="images/", outputDirectory
     }
 
     // Save the image
-    image.write(outputDirectory +'/'+ file);
+    image.write(outputDirectory + "/" + file);
   }
-}
-
+};
