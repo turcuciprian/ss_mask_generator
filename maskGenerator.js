@@ -1,11 +1,13 @@
+console.log("maskGenerator.js");
 import Jimp from "jimp";
 import fs from "fs";
+
 import { createFolderIfMissing } from "./lib.js";
 
 //all images in a directory that have the pixels #FF0000 are turned to #FFFFFF and the rest black
 export const maskGenerator = async (
   inputDirectory = "images/",
-  outputDirectory = "processed"
+  outputDirectory = "processed/"
 ) => {
   createFolderIfMissing([inputDirectory, outputDirectory]);
   // Read all the files in the input directory
@@ -13,7 +15,10 @@ export const maskGenerator = async (
 
   // Loop through each file in the directory
   for (const file of files) {
-    console.log(file);
+    // make sure that the file is an image
+    if (!file.match(/\.(jpg|jpeg|png|gif)$/)) {
+      continue;
+    }
     // Load the image
     const image = await Jimp.read(inputDirectory + file);
 
